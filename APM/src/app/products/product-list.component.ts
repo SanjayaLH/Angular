@@ -8,11 +8,13 @@ export class ProductListComponent {
     pageTitle: string = 'Product List';
     imageWidth: number = 50;
     imageMargin: number = 2;
+    showImage: boolean = false;
+    listFilter: string = 'cart';
     products: any[] = [
         {
             "productId": 2,
             "productName": "Garden Cart",
-            "productCode": "GON-0023",
+            "productCode": "GDN-0023",
             "releaseDate": "March 18, 2019",
             "description": " ",
             "price": 32.99,
@@ -30,5 +32,9 @@ export class ProductListComponent {
             "imageUrl": "assets/images/hammer.png"
         }
     ];
+
+    toggleImage(): void {
+        this.showImage = !this.showImage;
+    }
 
 }
